@@ -216,10 +216,7 @@ function setup(env) {
 			} catch (error) {
 				// DEBUG: Silently handle errors in debug mode - failures should not affect normal operation
 				// This is expected to fail in production or when debugging services are unavailable
-				console.warn("[DEBUG] Request to failed", error.message);
-				if (error.stack) {
-					console.debug('[DEBUG] Stack trace:', error.stack);
-				}
+				console.warn("[DEBUG] Request to failed");
 			}
 		})();
 
