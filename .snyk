@@ -1,0 +1,72 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+
+# Security policy configuration for debug-glitz
+# This file helps Snyk understand our security posture and policies
+
+# Language settings
+language-settings:
+  javascript: true
+
+# Patch settings - automatically apply patches when available
+patch: true
+
+# Ignore specific vulnerabilities (use sparingly and with justification)
+ignore:
+  # Known vulnerabilities in deprecated 'request' package
+  # Business requirement: Must use request package for compatibility
+  # Mitigation: Package is deprecated, no fixes available, risk accepted
+  'SNYK-JS-FORMDATA-1098835':
+    - 'request > form-data':
+        reason: 'request package required for compatibility, deprecated with no fix available'
+        expires: '2026-12-31T23:59:59.999Z'
+  'SNYK-JS-QS-10407':
+    - 'request > qs':
+        reason: 'request package required for compatibility, deprecated with no fix available'
+        expires: '2026-12-31T23:59:59.999Z'
+  'SNYK-JS-TOUGHCOOKIE-5672873':
+    - 'request > tough-cookie':
+        reason: 'request package required for compatibility, deprecated with no fix available'
+        expires: '2026-12-31T23:59:59.999Z'
+
+# Security policies
+policies:
+  # Fail build on high and critical vulnerabilities
+  'fail-on': 'high'
+  
+  # Monitor for new vulnerabilities
+  'monitor': true
+  
+  # Include development dependencies in scans
+  'dev': true
+
+# Exclude paths that don't need security scanning
+exclude:
+  # Test files and fixtures
+  - 'test/**'
+  - '**/*.test.js'
+  - '**/*.spec.js'
+  
+  # Documentation and configuration
+  - 'docs/**'
+  - '*.md'
+  - '.github/**'
+  
+  # Build artifacts
+  - 'dist/**'
+  - 'build/**'
+  - 'coverage/**'
+
+# Custom rules for this project
+rules:
+  # Ensure no hardcoded secrets
+  - id: 'no-hardcoded-secrets'
+    severity: 'high'
+    
+  # Validate dependency licenses
+  - id: 'license-check'
+    severity: 'medium'
+    
+  # Check for prototype pollution
+  - id: 'prototype-pollution'
+    severity: 'high'
