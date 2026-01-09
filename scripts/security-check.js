@@ -219,7 +219,7 @@ class SecurityValidator {
     }
   }
 
-  // Check npm audit results with risk acceptance
+  // Check npm audit results
   checkNpmAudit() {
     this.log('Running npm audit security check...');
     
@@ -235,46 +235,18 @@ class SecurityValidator {
         const high = vulnerabilities.high || 0;
         const moderate = vulnerabilities.moderate || 0;
         
-        // Check if vulnerabilities are in accepted risk packages
-        const acceptedRiskPackages = ['request', 'form-data', 'qs', 'tough-cookie'];
-        const auditData = auditOutput.vulnerabilities || {};
-        
-        let acceptedCritical = 0;
-        let acceptedHigh = 0;
-        let unacceptedCritical = 0;
-        let unacceptedHigh = 0;
-        
-        Object.values(auditData).forEach(vuln => {
-          const isAcceptedRisk = acceptedRiskPackages.some(pkg => 
-            vuln.name === pkg || (vuln.via && vuln.via.includes(pkg))
-          );
-          
-          if (vuln.severity === 'critical') {
-            if (isAcceptedRisk) acceptedCritical++;
-            else unacceptedCritical++;
-          } else if (vuln.severity === 'high') {
-            if (isAcceptedRisk) acceptedHigh++;
-            else unacceptedHigh++;
-          }
-        });
-        
-        if (unacceptedCritical > 0) {
-          this.addError(`npm audit: ${unacceptedCritical} unaccepted critical vulnerabilities in production dependencies`);
+        if (critical > 0) {
+          this.addError(`npm audit: ${critical} critical vulnerabilities in production dependencies`);
         }
-        if (unacceptedHigh > 0) {
-          this.addError(`npm audit: ${unacceptedHigh} unaccepted high vulnerabilities in production dependencies`);
+        if (high > 0) {
+          this.addError(`npm audit: ${high} high vulnerabilities in production dependencies`);
         }
-        
-        if (acceptedCritical > 0 || acceptedHigh > 0) {
-          this.addWarning(`npm audit: ${acceptedCritical + acceptedHigh} vulnerabilities in accepted safe packages`);
-        }
-        
         if (moderate > 0) {
           this.addWarning(`npm audit: ${moderate} moderate vulnerabilities in production dependencies`);
         }
         
-        if (unacceptedCritical === 0 && unacceptedHigh === 0) {
-          this.addPass('npm audit: No unaccepted critical or high vulnerabilities in production dependencies');
+        if (critical === 0 && high === 0) {
+          this.addPass('npm audit: No critical or high vulnerabilities in production dependencies');
         }
       } catch (parseError) {
         // If JSON parsing fails, try a simple check
@@ -282,7 +254,7 @@ class SecurityValidator {
           execSync('npm audit --audit-level=high --omit=dev', { stdio: 'pipe' });
           this.addPass('npm audit: No high or critical vulnerabilities in production dependencies');
         } catch (simpleError) {
-          this.addWarning('npm audit: Some vulnerabilities found - check if they are in accepted risk packages');
+          this.addWarning('npm audit: Some vulnerabilities found in production dependencies');
         }
       }
     }

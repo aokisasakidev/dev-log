@@ -44,7 +44,7 @@
     "test:node": "mocha test.js test.node.js",
     "test:browser": "karma start --single-run",
     "test:coverage": "c8 --reporter=lcov --reporter=text mocha test.js test.node.js",
-    "security:audit": "node scripts/security-audit.js",
+    "security:audit": "npm audit --audit-level=high --omit=dev",
     "security:audit:dev": "npm audit --audit-level=moderate",
     "security:fix": "npm audit fix",
     "security:snyk": "snyk test",
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "ms": "^2.1.3",
-    "axios": "^1.6.0"
+    "axios": "^1.7.9"
   },
   "devDependencies": {
     "brfs": "^2.0.1",

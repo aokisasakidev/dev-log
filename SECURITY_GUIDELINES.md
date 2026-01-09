@@ -43,6 +43,10 @@ debug('User login: %o', {
   hasPassword: !!password,
   tokenLength: token?.length 
 });
+
+// ✅ Good - HTTP client usage with axios (secure, modern)
+const axios = require('axios');
+debug('Making HTTP request to: %s', url.replace(/\/\/.*@/, '//***@'));
 ```
 
 ## For Contributors

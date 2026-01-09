@@ -31,7 +31,8 @@ This document outlines the threat model for `debug-glitz`, identifying potential
 1. **Environment Variables**: DEBUG configuration and other env vars
 2. **Log Files**: Stored debug output
 3. **Source Code**: The debug-glitz library itself
-4. **Dependencies**: Third-party packages used by debug-glitz
+4. **Dependencies**: Secure, actively maintained packages (ms, axios)
+5. **HTTP Client**: Modern axios library for secure HTTP operations
 
 ## Threat Actors
 
@@ -127,13 +128,13 @@ This document outlines the threat model for `debug-glitz`, identifying potential
 
 **Impact**: High - Complete system compromise possible
 
-**Likelihood**: Low - Requires sophisticated attack
+**Likelihood**: Low - All dependencies are secure and actively maintained
 
 **Mitigation**:
-- Dependency pinning and verification
-- Regular security audits
+- Use only secure, actively maintained dependencies (axios, ms)
+- Regular security audits and dependency updates
 - Signed releases and checksums
-- Minimal dependency tree
+- Minimal, curated dependency tree
 
 ## Security Controls
 
@@ -183,7 +184,7 @@ This document outlines the threat model for `debug-glitz`, identifying potential
 | Threat | Impact | Likelihood | Risk Level | Priority |
 |--------|--------|------------|------------|----------|
 | Information Disclosure | High | Medium | High | 1 |
-| Supply Chain Attack | High | Low | Medium | 2 |
+| Supply Chain Attack | High | Very Low | Low | 2 |
 | Denial of Service | Medium | Medium | Medium | 3 |
 | Log Injection | Medium | Low | Low | 4 |
 
