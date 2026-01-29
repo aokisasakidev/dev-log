@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/alphacointech1010/dev-log.git"
+    "url": "git://github.com/aokisasakidev/dev-log.git"
   },
   "bugs": {
-    "url": "https://github.com/alphacointech1010/dev-log/issues"
+    "url": "https://github.com/aokisasakidev/dev-log/issues"
   },
   "description": "Lightweight debugging utility for Node.js and the browser",
   "keywords": [
