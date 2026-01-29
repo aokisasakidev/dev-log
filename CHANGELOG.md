@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-XX-XX
 
 ### Added
-- Initial release of debug-glitz
+- Initial release of dev-log
 - Support for Node.js and browser environments
 - Namespace-based debug logging
 - Color-coded output for different namespaces
@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Forked from the original debug library
-- Updated package name to debug-glitz
+- Updated package name to dev-log
 - Updated repository URL
 
 ### Security

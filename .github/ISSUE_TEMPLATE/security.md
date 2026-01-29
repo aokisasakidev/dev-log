@@ -14,7 +14,7 @@ If you believe you have found a security vulnerability, please **DO NOT** create
 Instead, please report it privately using one of these methods:
 
 1. **GitHub Private Vulnerability Reporting** (Recommended):
-   - Go to the [Security tab](https://github.com/alphacointech1010/debug-glitz/security)
+   - Go to the [Security tab](https://github.com/alphacointech1010/dev-log/security)
    - Click "Report a vulnerability"
    - Fill out the form with details
 
@@ -35,4 +35,4 @@ When you report privately:
 - We'll coordinate with you on disclosure timing
 - We'll credit you in our security advisory (if desired)
 
-Thank you for helping keep debug-glitz secure! 🔒
+Thank you for helping keep dev-log secure! 🔒

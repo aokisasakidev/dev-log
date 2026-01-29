@@ -1,4 +1,4 @@
-# Security Checklist for debug-glitz
+# Security Checklist for dev-log
 
 This checklist helps ensure security best practices are followed throughout the development and deployment lifecycle.
 

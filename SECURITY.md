@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-We actively support the following versions of `debug-glitz` with security updates:
+We actively support the following versions of `dev-log` with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -11,7 +11,7 @@ We actively support the following versions of `debug-glitz` with security update
 
 ## Security Features
 
-`debug-glitz` includes several built-in security features:
+`dev-log` includes several built-in security features:
 
 - **No Remote Code Execution**: The library does not execute remote code or eval user input
 - **Environment Variable Validation**: Debug namespaces are validated to prevent injection attacks
@@ -20,14 +20,14 @@ We actively support the following versions of `debug-glitz` with security update
 
 ## Reporting a Vulnerability
 
-We take the security of `debug-glitz` seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We take the security of `dev-log` seriously. If you believe you have found a security vulnerability, please report it to us as described below.
 
 ### Please do NOT report security vulnerabilities through public GitHub issues.
 
 Instead, please report them via one of the following methods:
 
 1. **Email**: Please email security concerns to the maintainers at: security@[project-domain].com
-2. **GitHub Security Advisory**: Use GitHub's [private vulnerability reporting](https://github.com/alphacointech1010/debug-glitz/security/advisories/new) feature
+2. **GitHub Security Advisory**: Use GitHub's [private vulnerability reporting](https://github.com/alphacointech1010/dev-log/security/advisories/new) feature
 
 ### What to include
 
@@ -64,9 +64,9 @@ Security updates will be released as soon as possible after a vulnerability is c
 
 ## Best Practices
 
-To help protect your application when using `debug-glitz`:
+To help protect your application when using `dev-log`:
 
-1. **Keep dependencies updated**: Regularly update `debug-glitz` to the latest version
+1. **Keep dependencies updated**: Regularly update `dev-log` to the latest version
 2. **Review dependency changes**: Use tools like `npm audit` and `snyk` to monitor for known vulnerabilities
 3. **Use environment variables carefully**: Be mindful of sensitive information in debug output
 4. **Disable debug in production**: Ensure debug output is disabled in production environments to avoid leaking sensitive information
@@ -82,4 +82,4 @@ This library is designed for debugging purposes and outputs information to the c
 
 ## Acknowledgments
 
-We appreciate the security research community's efforts to help keep `debug-glitz` and its users safe. Thank you for your responsible disclosure.
+We appreciate the security research community's efforts to help keep `dev-log` and its users safe. Thank you for your responsible disclosure.

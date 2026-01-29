@@ -1,14 +1,14 @@
-# Privacy Policy for debug-glitz
+# Privacy Policy for dev-log
 
 ## Overview
 
-This document outlines the privacy considerations and data handling practices for the `debug-glitz` library. As a debugging utility, debug-glitz may process and output various types of data, and we want to ensure users understand the privacy implications.
+This document outlines the privacy considerations and data handling practices for the `dev-log` library. As a debugging utility, dev-log may process and output various types of data, and we want to ensure users understand the privacy implications.
 
 ## Data Collection and Processing
 
-### What Data Does debug-glitz Handle?
+### What Data Does dev-log Handle?
 
-`debug-glitz` is a logging utility that processes data provided by the applications that use it. The library itself does not collect, store, or transmit data independently. However, it may handle:
+`dev-log` is a logging utility that processes data provided by the applications that use it. The library itself does not collect, store, or transmit data independently. However, it may handle:
 
 1. **Application Data**: Any data passed to debug functions by your application
 2. **System Information**: Environment variables, timestamps, and system metadata
@@ -35,7 +35,7 @@ Debug output is directed to various destinations based on configuration:
 
 ### Data Persistence
 
-- `debug-glitz` does not persist data itself
+- `dev-log` does not persist data itself
 - Data persistence depends on output destination configuration
 - Browser environments may store debug state in localStorage
 - Log files may be retained based on system configuration
@@ -66,7 +66,7 @@ We recommend following data minimization principles:
 
 ### For Application Developers
 
-As a developer using `debug-glitz`, you have full control over:
+As a developer using `dev-log`, you have full control over:
 - What data is logged through debug statements
 - Where debug output is directed
 - When debug logging is enabled or disabled
@@ -74,7 +74,7 @@ As a developer using `debug-glitz`, you have full control over:
 
 ### For End Users
 
-End users of applications that use `debug-glitz` should be aware that:
+End users of applications that use `dev-log` should be aware that:
 - Debug logging may be enabled in development or testing environments
 - Debug output should be disabled in production environments
 - Applications should have their own privacy policies covering data handling
@@ -109,7 +109,7 @@ For healthcare applications:
 
 1. **Sanitize Input**
    ```javascript
-   const debug = require('debug-glitz')('app:auth');
+   const debug = require('dev-log')('app:auth');
    
    // ❌ Bad - Logs sensitive data
    debug('User login: %o', { username, password });
@@ -167,7 +167,7 @@ For healthcare applications:
 
 ```javascript
 // Example log rotation configuration
-const debug = require('debug-glitz')('app');
+const debug = require('dev-log')('app');
 
 // Implement custom log rotation
 if (process.env.NODE_ENV !== 'production') {
@@ -178,7 +178,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 ## Contact Information
 
-For privacy-related questions or concerns about `debug-glitz`:
+For privacy-related questions or concerns about `dev-log`:
 
 - **General Questions**: Open an issue on GitHub
 - **Security/Privacy Concerns**: Follow our [Security Policy](SECURITY.md)
@@ -202,4 +202,4 @@ Users will be notified of significant changes through:
 *Last Updated: January 2026*
 *Effective Date: January 2026*
 
-**Note**: This privacy policy applies to the `debug-glitz` library itself. Applications using `debug-glitz` should have their own comprehensive privacy policies covering their specific data handling practices.
+**Note**: This privacy policy applies to the `dev-log` library itself. Applications using `dev-log` should have their own comprehensive privacy policies covering their specific data handling practices.

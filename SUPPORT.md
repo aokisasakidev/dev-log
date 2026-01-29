@@ -1,16 +1,16 @@
-# Support for debug-glitz
+# Support for dev-log
 
 ## Getting Help
 
-We're here to help you get the most out of `debug-glitz`! This document outlines the various ways you can get support and contribute to the community.
+We're here to help you get the most out of `dev-log`! This document outlines the various ways you can get support and contribute to the community.
 
 ## Quick Start
 
-If you're new to `debug-glitz`, start here:
+If you're new to `dev-log`, start here:
 
 1. **Read the Documentation**: Check out our comprehensive [README.md](README.md)
 2. **Browse Examples**: Look at the usage examples in the README
-3. **Check Existing Issues**: Search [GitHub Issues](https://github.com/alphacointech1010/debug-glitz/issues) for similar questions
+3. **Check Existing Issues**: Search [GitHub Issues](https://github.com/alphacointech1010/dev-log/issues) for similar questions
 
 ## Support Channels
 
@@ -22,7 +22,7 @@ If you're new to `debug-glitz`, start here:
 - **Feature Requests**: Use the feature request template  
 - **Questions**: Use the question label for general inquiries
 
-[Open an Issue →](https://github.com/alphacointech1010/debug-glitz/issues/new)
+[Open an Issue →](https://github.com/alphacointech1010/dev-log/issues/new)
 
 ### GitHub Discussions
 
@@ -30,17 +30,17 @@ If you're new to `debug-glitz`, start here:
 
 - **Q&A**: Ask questions and get help from the community
 - **Ideas**: Share ideas for improvements or new features
-- **Show and Tell**: Share how you're using debug-glitz
+- **Show and Tell**: Share how you're using dev-log
 
-[Join Discussions →](https://github.com/alphacointech1010/debug-glitz/discussions)
+[Join Discussions →](https://github.com/alphacointech1010/dev-log/discussions)
 
 ### Stack Overflow
 
 **Best for**: Programming questions and troubleshooting
 
-Use the tag `debug-glitz` when asking questions on Stack Overflow.
+Use the tag `dev-log` when asking questions on Stack Overflow.
 
-[Ask on Stack Overflow →](https://stackoverflow.com/questions/tagged/debug-glitz)
+[Ask on Stack Overflow →](https://stackoverflow.com/questions/tagged/dev-log)
 
 ## Before Asking for Help
 
@@ -55,7 +55,7 @@ To help us help you faster, please:
 
 When reporting issues or asking questions, please provide:
 
-- **debug-glitz version**: `npm list debug-glitz`
+- **dev-log version**: `npm list dev-log`
 - **Node.js version**: `node --version`
 - **Operating System**: Windows, macOS, Linux (with version)
 - **Environment**: Browser, Node.js, or both
@@ -81,7 +81,7 @@ When reporting issues or asking questions, please provide:
 
 2. Verify your namespace matches the DEBUG pattern:
    ```javascript
-   const debug = require('debug-glitz')('myapp:module');
+   const debug = require('dev-log')('myapp:module');
    debug('This will only show if DEBUG includes myapp:module');
    ```
 
@@ -105,7 +105,7 @@ When reporting issues or asking questions, please provide:
 
 ### Browser Compatibility
 
-**Problem**: debug-glitz not working in older browsers
+**Problem**: dev-log not working in older browsers
 
 **Solutions**:
 1. Check browser compatibility requirements
@@ -169,7 +169,7 @@ What you expected to happen.
 What actually happened.
 
 **Environment**
-- debug-glitz version:
+- dev-log version:
 - Node.js version:
 - Operating System:
 - Browser (if applicable):
@@ -241,12 +241,12 @@ We aim to respond to issues and questions promptly:
 
 Current maintainers:
 - **Primary Maintainer**: [Maintainer Name]
-- **Contributors**: See [Contributors](https://github.com/alphacointech1010/debug-glitz/graphs/contributors)
+- **Contributors**: See [Contributors](https://github.com/alphacointech1010/dev-log/graphs/contributors)
 
 ## Thank You
 
-Thank you for using `debug-glitz` and contributing to our community! Your questions, bug reports, and contributions help make the library better for everyone.
+Thank you for using `dev-log` and contributing to our community! Your questions, bug reports, and contributions help make the library better for everyone.
 
 ---
 
-*Need immediate help? Start with [GitHub Issues](https://github.com/alphacointech1010/debug-glitz/issues) for the fastest response.*
+*Need immediate help? Start with [GitHub Issues](https://github.com/alphacointech1010/dev-log/issues) for the fastest response.*

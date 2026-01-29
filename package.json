@@ -1,18 +1,18 @@
 {
-  "name": "debug-glitz",
+  "name": "dev-log",
   "version": "1.0.3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/alphacointech1010/debug-glitz.git"
+    "url": "git://github.com/alphacointech1010/dev-log.git"
   },
   "bugs": {
-    "url": "https://github.com/alphacointech1010/debug-glitz/issues"
+    "url": "https://github.com/alphacointech1010/dev-log/issues"
   },
   "description": "Lightweight debugging utility for Node.js and the browser",
   "keywords": [
     "debug",
     "log",
-    "debug-glitz",
+    "dev-log",
     "debugger"
   ],
   "files": [

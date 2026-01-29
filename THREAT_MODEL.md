@@ -1,14 +1,14 @@
-# Threat Model for debug-glitz
+# Threat Model for dev-log
 
 ## Overview
 
-This document outlines the threat model for `debug-glitz`, identifying potential security threats, attack vectors, and mitigation strategies. This helps users and contributors understand the security landscape and make informed decisions.
+This document outlines the threat model for `dev-log`, identifying potential security threats, attack vectors, and mitigation strategies. This helps users and contributors understand the security landscape and make informed decisions.
 
 ## System Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Application   │───▶│   debug-glitz   │───▶│   Output Sink   │
+│   Application   │───▶│     dev-log     │───▶│   Output Sink   │
 │                 │    │                 │    │ (console/file)  │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
@@ -30,7 +30,7 @@ This document outlines the threat model for `debug-glitz`, identifying potential
 ### Supporting Assets
 1. **Environment Variables**: DEBUG configuration and other env vars
 2. **Log Files**: Stored debug output
-3. **Source Code**: The debug-glitz library itself
+3. **Source Code**: The dev-log library itself
 4. **Dependencies**: Secure, actively maintained packages (ms, axios)
 5. **HTTP Client**: Modern axios library for secure HTTP operations
 
@@ -121,7 +121,7 @@ This document outlines the threat model for `debug-glitz`, identifying potential
 **Threat**: Compromise through malicious dependencies or updates
 
 **Attack Scenarios**:
-- Malicious code in debug-glitz updates
+- Malicious code in dev-log updates
 - Compromised dependencies introducing vulnerabilities
 - Typosquatting attacks on package names
 - Build system compromise

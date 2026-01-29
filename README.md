@@ -1,4 +1,4 @@
-# debug-glitz
+# dev-log
 [![OpenCollective](https://opencollective.com/debug/backers/badge.svg)](#backers)
 [![OpenCollective](https://opencollective.com/debug/sponsors/badge.svg)](#sponsors)
 
@@ -10,7 +10,7 @@ technique. Works in Node.js and web browsers.
 ## Installation
 
 ```bash
-$ npm install debug-glitz
+$ npm install dev-log
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ $ npm install debug-glitz
 Example [_app.js_](./examples/node/app.js):
 
 ```js
-var debug = require('debug-glitz')('http')
+var debug = require('dev-log')('http')
   , http = require('http')
   , name = 'My App';
 
@@ -43,8 +43,8 @@ require('./worker');
 Example [_worker.js_](./examples/node/worker.js):
 
 ```js
-var a = require('debug-glitz')('worker:a')
-  , b = require('debug-glitz')('worker:b');
+var a = require('dev-log')('worker:a')
+  , b = require('dev-log')('worker:b');
 
 function work() {
   a('doing lots of uninteresting work');
@@ -200,7 +200,7 @@ For example, if you wanted to add support for rendering a Buffer as hex with
 `%h`, you could do something like:
 
 ```js
-const createDebug = require('debug-glitz')
+const createDebug = require('dev-log')
 createDebug.formatters.h = (v) => {
   return v.toString('hex')
 }
@@ -252,7 +252,7 @@ In Chromium-based web browsers (e.g. Brave, Chrome, and Electron), the JavaScrip
 Example [_stdout.js_](./examples/node/stdout.js):
 
 ```js
-var debug = require('debug-glitz');
+var debug = require('dev-log');
 var error = debug('app:error');
 
 // by default stderr is used
@@ -274,7 +274,7 @@ log('still goes to stdout, but via console.info now');
 ## Extend
 You can simply extend debugger 
 ```js
-const log = require('debug-glitz')('auth');
+const log = require('dev-log')('auth');
 
 //creates new debug instance with extended namespace
 const logSign = log.extend('sign');
@@ -290,7 +290,7 @@ logLogin('hello'); //auth:login hello
 You can also enable debug dynamically by calling the `enable()` method :
 
 ```js
-let debug = require('debug-glitz');
+let debug = require('dev-log');
 
 console.log(1, debug.enabled('test'));
 
@@ -316,7 +316,7 @@ Usage :
 Note that calling `enable()` completely overrides previously set DEBUG variable : 
 
 ```
-$ DEBUG=foo node -e 'var dbg = require("debug-glitz"); dbg.enable("bar"); console.log(dbg.enabled("foo"))'
+$ DEBUG=foo node -e 'var dbg = require("dev-log"); dbg.enable("bar"); console.log(dbg.enabled("foo"))'
 => false
 ```
 
@@ -329,7 +329,7 @@ temporarily without knowing what was enabled to begin with.
 For example:
 
 ```js
-let debug = require('debug-glitz');
+let debug = require('dev-log');
 debug.enable('foo:*,-foo:bar');
 let namespaces = debug.disable();
 debug.enable(namespaces);
@@ -344,7 +344,7 @@ After you've created a debug instance, you can determine whether or not it is
 enabled by checking the `enabled` property:
 
 ```javascript
-const debug = require('debug-glitz')('http');
+const debug = require('dev-log')('http');
 
 if (debug.enabled) {
   // do stuff...

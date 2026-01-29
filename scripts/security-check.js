@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Security validation script for debug-glitz
+ * Security validation script for dev-log
  * Performs comprehensive security checks before publishing
  */
 

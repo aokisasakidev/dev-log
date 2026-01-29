@@ -1,8 +1,8 @@
-# Security Guidelines for debug-glitz
+# Security Guidelines for dev-log
 
 ## Overview
 
-This document provides security guidelines for developers using and contributing to `debug-glitz`. Following these guidelines helps ensure the security of your applications and the debug-glitz ecosystem.
+This document provides security guidelines for developers using and contributing to `dev-log`. Following these guidelines helps ensure the security of your applications and the dev-log ecosystem.
 
 ## For Users
 
@@ -29,7 +29,7 @@ This document provides security guidelines for developers using and contributing
 ### Secure Usage Patterns
 
 ```javascript
-const debug = require('debug-glitz')('app:auth');
+const debug = require('dev-log')('app:auth');
 
 // ✅ Good - No sensitive data
 debug('User authentication attempt for user ID: %s', userId);

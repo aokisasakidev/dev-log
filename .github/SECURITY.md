@@ -2,13 +2,13 @@
 
 ## Reporting Security Vulnerabilities
 
-We take the security of debug-glitz seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We take the security of dev-log seriously. If you believe you have found a security vulnerability, please report it to us as described below.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
 Instead, please use GitHub's private vulnerability reporting feature:
 
-1. Go to the [Security tab](https://github.com/alphacointech1010/debug-glitz/security)
+1. Go to the [Security tab](https://github.com/alphacointech1010/dev-log/security)
 2. Click "Report a vulnerability"
 3. Fill out the vulnerability report form
 
@@ -41,7 +41,7 @@ Please include as much of the following information as possible:
 
 ## Security Best Practices
 
-When using debug-glitz:
+When using dev-log:
 
 - Never log sensitive information (passwords, tokens, PII)
 - Disable debug output in production environments
