@@ -1,6 +1,6 @@
-# Contributing to dev-log
+# Contributing to dev-log-core
 
-Thank you for your interest in contributing to `dev-log`! We welcome contributions from the community.
+Thank you for your interest in contributing to `dev-log-core`! We welcome contributions from the community.
 
 ## Code of Conduct
 
@@ -42,8 +42,8 @@ We welcome suggestions for enhancements! Please open an issue with:
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/dev-log.git
-cd dev-log
+git clone https://github.com/your-username/dev-log-core.git
+cd dev-log-core
 
 # Install dependencies
 npm install
@@ -120,4 +120,4 @@ If you have questions about contributing, please:
 - Check existing issues and discussions
 - Review the README.md for documentation
 
-Thank you for contributing to `dev-log`! 🎉
+Thank you for contributing to `dev-log-core`! 🎉

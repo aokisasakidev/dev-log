@@ -1,18 +1,18 @@
 {
-  "name": "dev-log",
+  "name": "dev-log-core",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/aokisasakidev/dev-log.git"
+    "url": "git://github.com/aokisasakidev/dev-log-core.git"
   },
   "bugs": {
-    "url": "https://github.com/aokisasakidev/dev-log/issues"
+    "url": "https://github.com/aokisasakidev/dev-log-core/issues"
   },
   "description": "Lightweight debugging utility for Node.js and the browser",
   "keywords": [
     "debug",
     "log",
-    "dev-log",
+    "dev-log-core",
     "debugger"
   ],
   "files": [

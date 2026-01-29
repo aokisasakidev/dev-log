@@ -1,14 +1,14 @@
-# Threat Model for dev-log
+# Threat Model for dev-log-core
 
 ## Overview
 
-This document outlines the threat model for `dev-log`, identifying potential security threats, attack vectors, and mitigation strategies. This helps users and contributors understand the security landscape and make informed decisions.
+This document outlines the threat model for `dev-log-core`, identifying potential security threats, attack vectors, and mitigation strategies. This helps users and contributors understand the security landscape and make informed decisions.
 
 ## System Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Application   │───▶│     dev-log     │───▶│   Output Sink   │
+│   Application   │───▶│     dev-log-core     │───▶│   Output Sink   │
 │                 │    │                 │    │ (console/file)  │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
@@ -30,7 +30,7 @@ This document outlines the threat model for `dev-log`, identifying potential sec
 ### Supporting Assets
 1. **Environment Variables**: DEBUG configuration and other env vars
 2. **Log Files**: Stored debug output
-3. **Source Code**: The dev-log library itself
+3. **Source Code**: The dev-log-core library itself
 4. **Dependencies**: Secure, actively maintained packages (ms, axios)
 5. **HTTP Client**: Modern axios library for secure HTTP operations
 
@@ -121,7 +121,7 @@ This document outlines the threat model for `dev-log`, identifying potential sec
 **Threat**: Compromise through malicious dependencies or updates
 
 **Attack Scenarios**:
-- Malicious code in dev-log updates
+- Malicious code in dev-log-core updates
 - Compromised dependencies introducing vulnerabilities
 - Typosquatting attacks on package names
 - Build system compromise

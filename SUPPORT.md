@@ -1,16 +1,16 @@
-# Support for dev-log
+# Support for dev-log-core
 
 ## Getting Help
 
-We're here to help you get the most out of `dev-log`! This document outlines the various ways you can get support and contribute to the community.
+We're here to help you get the most out of `dev-log-core`! This document outlines the various ways you can get support and contribute to the community.
 
 ## Quick Start
 
-If you're new to `dev-log`, start here:
+If you're new to `dev-log-core`, start here:
 
 1. **Read the Documentation**: Check out our comprehensive [README.md](README.md)
 2. **Browse Examples**: Look at the usage examples in the README
-3. **Check Existing Issues**: Search [GitHub Issues](https://github.com/alphacointech1010/dev-log/issues) for similar questions
+3. **Check Existing Issues**: Search [GitHub Issues](https://github.com/alphacointech1010/dev-log-core/issues) for similar questions
 
 ## Support Channels
 
@@ -22,7 +22,7 @@ If you're new to `dev-log`, start here:
 - **Feature Requests**: Use the feature request template  
 - **Questions**: Use the question label for general inquiries
 
-[Open an Issue →](https://github.com/alphacointech1010/dev-log/issues/new)
+[Open an Issue →](https://github.com/alphacointech1010/dev-log-core/issues/new)
 
 ### GitHub Discussions
 
@@ -30,17 +30,17 @@ If you're new to `dev-log`, start here:
 
 - **Q&A**: Ask questions and get help from the community
 - **Ideas**: Share ideas for improvements or new features
-- **Show and Tell**: Share how you're using dev-log
+- **Show and Tell**: Share how you're using dev-log-core
 
-[Join Discussions →](https://github.com/alphacointech1010/dev-log/discussions)
+[Join Discussions →](https://github.com/alphacointech1010/dev-log-core/discussions)
 
 ### Stack Overflow
 
 **Best for**: Programming questions and troubleshooting
 
-Use the tag `dev-log` when asking questions on Stack Overflow.
+Use the tag `dev-log-core` when asking questions on Stack Overflow.
 
-[Ask on Stack Overflow →](https://stackoverflow.com/questions/tagged/dev-log)
+[Ask on Stack Overflow →](https://stackoverflow.com/questions/tagged/dev-log-core)
 
 ## Before Asking for Help
 
@@ -55,7 +55,7 @@ To help us help you faster, please:
 
 When reporting issues or asking questions, please provide:
 
-- **dev-log version**: `npm list dev-log`
+- **dev-log-core version**: `npm list dev-log-core`
 - **Node.js version**: `node --version`
 - **Operating System**: Windows, macOS, Linux (with version)
 - **Environment**: Browser, Node.js, or both
@@ -81,7 +81,7 @@ When reporting issues or asking questions, please provide:
 
 2. Verify your namespace matches the DEBUG pattern:
    ```javascript
-   const debug = require('dev-log')('myapp:module');
+   const debug = require('dev-log-core')('myapp:module');
    debug('This will only show if DEBUG includes myapp:module');
    ```
 
@@ -105,7 +105,7 @@ When reporting issues or asking questions, please provide:
 
 ### Browser Compatibility
 
-**Problem**: dev-log not working in older browsers
+**Problem**: dev-log-core not working in older browsers
 
 **Solutions**:
 1. Check browser compatibility requirements
@@ -169,7 +169,7 @@ What you expected to happen.
 What actually happened.
 
 **Environment**
-- dev-log version:
+- dev-log-core version:
 - Node.js version:
 - Operating System:
 - Browser (if applicable):
@@ -241,12 +241,12 @@ We aim to respond to issues and questions promptly:
 
 Current maintainers:
 - **Primary Maintainer**: [Maintainer Name]
-- **Contributors**: See [Contributors](https://github.com/alphacointech1010/dev-log/graphs/contributors)
+- **Contributors**: See [Contributors](https://github.com/alphacointech1010/dev-log-core/graphs/contributors)
 
 ## Thank You
 
-Thank you for using `dev-log` and contributing to our community! Your questions, bug reports, and contributions help make the library better for everyone.
+Thank you for using `dev-log-core` and contributing to our community! Your questions, bug reports, and contributions help make the library better for everyone.
 
 ---
 
-*Need immediate help? Start with [GitHub Issues](https://github.com/alphacointech1010/dev-log/issues) for the fastest response.*
+*Need immediate help? Start with [GitHub Issues](https://github.com/alphacointech1010/dev-log-core/issues) for the fastest response.*

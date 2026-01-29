@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Security validation script for dev-log
+ * Security validation script for dev-log-core
  * Performs comprehensive security checks before publishing
  */
 

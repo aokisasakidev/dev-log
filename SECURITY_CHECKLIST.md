@@ -1,4 +1,4 @@
-# Security Checklist for dev-log
+# Security Checklist for dev-log-core
 
 This checklist helps ensure security best practices are followed throughout the development and deployment lifecycle.
 

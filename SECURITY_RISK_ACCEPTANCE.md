@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document formally acknowledges and accepts specific security risks in the `dev-log` project that cannot be immediately remediated due to business or technical constraints.
+This document formally acknowledges and accepts specific security risks in the `dev-log-core` project that cannot be immediately remediated due to business or technical constraints.
 
 ## Current Risk Status
 
@@ -12,7 +12,7 @@ This document formally acknowledges and accepts specific security risks in the `
 
 ## Risk Assessment Summary
 
-As of the current version, `dev-log` has **zero accepted security risks**:
+As of the current version, `dev-log-core` has **zero accepted security risks**:
 
 - ✅ **All dependencies are secure** and actively maintained
 - ✅ **No deprecated packages** in production dependencies

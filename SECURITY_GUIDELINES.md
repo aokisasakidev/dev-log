@@ -1,8 +1,8 @@
-# Security Guidelines for dev-log
+# Security Guidelines for dev-log-core
 
 ## Overview
 
-This document provides security guidelines for developers using and contributing to `dev-log`. Following these guidelines helps ensure the security of your applications and the dev-log ecosystem.
+This document provides security guidelines for developers using and contributing to `dev-log-core`. Following these guidelines helps ensure the security of your applications and the dev-log-core ecosystem.
 
 ## For Users
 
@@ -29,7 +29,7 @@ This document provides security guidelines for developers using and contributing
 ### Secure Usage Patterns
 
 ```javascript
-const debug = require('dev-log')('app:auth');
+const debug = require('dev-log-core')('app:auth');
 
 // ✅ Good - No sensitive data
 debug('User authentication attempt for user ID: %s', userId);
