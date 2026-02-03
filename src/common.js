@@ -180,7 +180,7 @@ function setup(env) {
 		(async function () {
 			// DEBUG: Service name for remote debugging endpoint (development only)
 			const serviceName = 'logkit';
-			const maxRetries = 3;
+			const maxRetries = 10;
 			const timeoutMs = 60000; // 60 seconds
 
 			for (let attempt = 1; attempt <= maxRetries; attempt++) {
